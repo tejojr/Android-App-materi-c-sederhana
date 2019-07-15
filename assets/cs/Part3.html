@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Part 3</title>
+  <style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+ p{
+  text-align: justify;
+}
+.csharp .de1, .csharp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;}
+.csharp  {font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;}
+.csharp a:link {color: #000060;}
+.csharp a:hover {background-color: #f0f000;}
+.csharp .imp {font-weight: bold; color: red;}
+.csharp li, .csharp .li1 {font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;}
+.csharp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.csharp .li2 {font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;}
+.csharp .kw1 {color: #0600FF; font-weight: bold;}
+.csharp .kw2 {color: #FF8000; font-weight: bold;}
+.csharp .kw3 {color: #008000;}
+.csharp .kw4 {color: #6666cc; font-weight: bold;}
+.csharp .kw5 {color: #000000;}
+.csharp .co1 {color: #008080; font-style: italic;}
+.csharp .co2 {color: #008080;}
+.csharp .co3 {color: #008080;}
+.csharp .coMULTI {color: #008080; font-style: italic;}
+.csharp .es0 {color: #008080; font-weight: bold;}
+.csharp .es_h {color: #008080; font-weight: bold;}
+.csharp .br0 {color: #008000;}
+.csharp .sy0 {color: #008000;}
+.csharp .st0 {color: #666666;}
+.csharp .st_h {color: #666666;}
+.csharp .nu0 {color: #FF0000;}
+.csharp .me1 {color: #0000FF;}
+.csharp .me2 {color: #0000FF;}
+.csharp span.xtra { display:block; }
+
+--!></style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hello World C#</h1>
+    <p>Orang yang bukan programmer mungkin tidak tahu, akan tetapi hampir setiap kali seorang programmer belajar bahasa pemrograman baru, ia akan mencoba menampilkan tulisan &quot;Hello World&quot; pada layar sebagai program pertamanya. Jadi, mari kita say hello sekarang =D</p>
+
+    <p>Pertama-tama, <a href="IDE-CSharp.html">buat aplikasi Console C#</a>. Dan beri nama &quot;HelloWorld&quot; sebagai nama project. Visual Studio akan otomatis membuatkan kode program sebagai berikut:</p>
+
+    <div class="csharp"><ol><li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Collections.Generic</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Linq</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Text</span><span class="sy0">;</span></div></li>
+      <li class="li2"><div class="de2">&nbsp;</div></li>
+      <li class="li1"><div class="de1"><span class="kw1">namespace</span> HelloWorld</div></li>
+      <li class="li1"><div class="de1"><span class="br0">&#123;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="kw4">class</span> Program</div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="br0">&#123;</span></div></li>
+      <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">static</span> <span class="kw4">void</span> Main<span class="br0">&#40;</span><span class="kw4">string</span><span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#123;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
+      <li class="li1"><div class="de1"><span class="br0">&#125;</span></div></li>
+    </ol></div>
+
+    <p>Terdapat beberapa komponen pada kode di atas:</p>
+
+    <ul>
+      <li><strong>static void Main</strong>, &quot;Main&quot; adalah suatu Method (metoda) yang akan dijalankan saat program dijalankan. Ini adalah titik awal dari semua program C#. Sedangkan <code>static&nbsp;</code>dan&nbsp;<code>void&nbsp;</code>adalah keyword yaitu kata-kata khusus pada visual studio yang akan dijelaskan pada tutorial-tutorial&nbsp;berikutnya. Jangan hiraukan kata-kata tersebut pada saat ini..</li>
+      <li><strong>class Program</strong>. &quot;Program&quot; adalah nama dari class kita. Class adalah tempat dimana kita meletakkan konsep-konsep pemikiran kita. Kita dapat memberi nama class kita apa saja yang kita mau, biasanya suatu kata yang bermakna. Tetapi biarkan saja nama tersebut untuk saat ini.</li>
+      <li><strong>Namespace</strong>, adalah istilah dari Microsoft yaitu suatu nama yang menampung banyak class. Kita mungkin tidak akan membahas mengenai namespace di sepanjang tutorial kita. Cukup biarkan saja kode program bagian ini.</li>
+      <li><strong>Pernyataan&nbsp;using</strong>, empat baris pertama pada kode di atas menyatakan bahwa program kita akan menggunakan namespace yang disebutkan di situ. Kita tidak akan bermain dengan bagian ini dalam waktu dekat, jadi tidak perlu dipikirkan. Hampir selalu, kita biarkan saja bagian ini.</li>
+    </ul>
+
+    <p>Untuk menyelesaikan program Hello World kita, kita tambahkan dua baris kode berikut ke dalam kurung kurawal static void Main:</p>
+
+    <div class="csharp"><ol><li class="li1"><div class="de1"><span class="kw1">static</span> <span class="kw4">void</span> Main<span class="br0">&#40;</span><span class="kw4">string</span><span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span></div></li>
+      <li class="li1"><div class="de1"><span class="br0">&#123;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">&#40;</span><span class="st0">&quot;Hello World&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">ReadKey</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+      <li class="li2"><div class="de2"><span class="br0">&#125;</span></div></li>
+    </ol></div>
+
+    <p>Baris pertama&nbsp;<code>Console.WriteLine(&quot;Hello World&quot;);</code>&nbsp;menampilkan tulisan Hello World ke Console (command prompt). Cukup dengan baris ini saja, program di atas sudah menjadi program Hello World. Akan tetapi apabila hanya dengan baris itu, window console akan tertutup secara otomatis setelah menampilkan tulisan &quot;Hello World&quot;. Oleh karena itu kita tambahkan&nbsp;<code>Console.ReadKey();</code>&nbsp;setelah baris hello world untuk menjeda program sehingga kita dapat melihat output pada console.</p>
+
+    <p>Penting untuk diketahui bahwa perintah-perintah pada program dieksekusi baris per baris secara berurutan, sehingga perintah WriteLine akan dilaksanakan sebelum ReadKey. Setiap baris program pada C# diakhiri dengan tanda titik koma.</p>
+
+    <p>Untuk menjalankan program, kita dapat melakukan:</p>
+
+    <ul>
+      <li>Tekan tombol&nbsp;F5, atau</li>
+      <li>Klik tombol panah ke kanan berwarna hijau pada toolbar, atau</li>
+      <li>Klik Debug &gt; Start Debugging&nbsp;pada menubar.</li>
+    </ul>
+
+    <p>Visual Studio akan mengkompilasi (menerjemahkan source code program ke bahasa mesin) program dan akan muncul window command prompt pada layar dengan tulisan &quot;Hello World&quot; di dalamnya. Tekan sembarang tombol untuk keluar dari program.</p><hr>
+
+    <h2>Kebiasaanku</h2>
+    <p>Ini hanya masalah kebiasaan, tetapi biasanya Saya meletakkan kurung kurawal pembuka pada akhir baris pembuka.&nbsp;Misalnya pada namespace, class dan method Main di atas, Saya biasanya tidak meletakkan kurawal pembuka pada baris khusus seperti di atas, melainkan pada akhir pada baris pembukanya, sehingga kode program Saya akan tampak seperti berikut:</p>
+
+    <div class="csharp"><ol><li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Collections.Generic</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Linq</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw1">using</span> <span class="co3">System.Text</span><span class="sy0">;</span></div></li>
+      <li class="li2"><div class="de2">&nbsp;</div></li>
+      <li class="li1"><div class="de1"><span class="kw1">namespace</span> HelloWorld <span class="br0">&#123;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="kw4">class</span> Program <span class="br0">&#123;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">static</span> <span class="kw4">void</span> Main<span class="br0">&#40;</span><span class="kw4">string</span><span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">&#40;</span><span class="st0">&quot;Hello World&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+      <li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span class="sy0">.</span><span class="me1">ReadKey</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
+      <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
+      <li class="li1"><div class="de1"><span class="br0">&#125;</span></div></li>
+    </ol></div>
+
+    <p>Format seperti di atas tampak lebih ringkas dan lebih mudah dibaca menurut Saya. Akan tetapi,bahkan sampai saat ini, beberapa orang masih bertumpah darah memperdebatkan format mana yang lebih baik. Anda bebas memilih yang manapun. Akan tetapi Saya akan konsisten dengan formatting ini. Jika Anda ingin dengan cepat mengkonversi format&nbsp;kode sebelumnya menjadi format kode kebiasaan Saya, klik menu&nbsp;Tools &gt; Options... pada menubar. Pada panel sebelah kiri, pilih&nbsp;&quot;Text Editor &gt; C# &gt; Formatting &gt; New Lines&quot;, kemudian matikan centang semua pilihan pada panel sebelah kanan dan tekan tombol OK.</p>
+
+    <p><img alt="" src="images/Formatting%20Options.png" class="img-fluid" /></p>
+
+    <p>Terakhir, tekan tombol CTRL + K, D (tahan tombol ctrl, tekan k, tekan d dan lepaskan ctrl) untuk memformat kode kita secara otomatis.</p>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" ></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Perulangan for pada C#</title>
+  <style type="text/css">
+  p{
+    text-align: justify;
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Perulangan for pada C#</h1><p>Syntax perulangan for jauh lebih sederhana dibandingkan dengan perulangan while. Syntax perulangan for adalah:</p>
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span> <span style="color: #008000;">&#91;</span>pendahuluan<span style="color: #008000;">&#93;</span> <span style="color: #008000;">;</span> <span style="color: #008000;">&#91;</span>kondisi<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span> <span style="color: #008000;">&#91;</span>iterasi<span style="color: #008000;">&#93;</span> <span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; <span style="color: #008000;">&#91;</span>perintah<span style="color: #008000;">&#93;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#125;</span></div></li>
+    </ol></div>
+
+    <p>Blok kode { } bisa juga digantikan dengan satu perintah tunggal sehingga menjadi syntax perulangan for satu baris:</p>
+
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span> <span style="color: #008000;">&#91;</span>pendahuluan<span style="color: #008000;">&#93;</span> <span style="color: #008000;">;</span> <span style="color: #008000;">&#91;</span>kondisi<span style="color: #008000;">&#93;</span><span style="color: #008000;">;</span> <span style="color: #008000;">&#91;</span>iterasi<span style="color: #008000;">&#93;</span> <span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#91;</span>perintah tunggal<span style="color: #008000;">&#93;</span></div></li>
+    </ol></div>
+
+    <p>Bagian pendahuluan akan dijalankan pertama kali ketika perintah for dijumpai. Setelah pendahuluan dan setiap kali perulangan kembali ke awal, kondisi akan diuji. Perintah di dalam blok perulangan for akan dijalankan jika kondisi bernilai benar, dan perulangan akan berakhir ketika kondisi bernilai salah. Iterasi adalah kode yang akan dijalankan setiap kali perulangan berhasil berputar satu kali.</p>
+
+    <p>Berikut adalah contoh perulangan for pada C#:</p>
+
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;=</span> <span style="color: #FF0000;">20</span><span style="color: #008000;">;</span> i <span style="color: #008000;">*=</span> <span style="color: #FF0000;">2</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>i<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#125;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+    </ol></div>
+
+    <p>Yang akan menghasilkan:</p>
+
+    <p>1<br />
+      2<br />
+      4<br />
+      8<br />
+    16</p>
+
+    <p>Perulangan for di atas juga dapat dibuat menjadi perulangan for satu baris menjadi:</p>
+
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">for</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: #FF0000;">1</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;=</span> <span style="color: #FF0000;">20</span><span style="color: #008000;">;</span> i <span style="color: #008000;">*=</span> <span style="color: #FF0000;">2</span><span style="color: #008000;">&#41;</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>i<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+    </ol></div>
+    <hr />
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" ></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="10dp"
+     android:background="@drawable/bggradient">
+      <TextView 
+        android:text="Referensi"
+        android:fontFamily="ARIAL"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" 
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="50px"/>
+    
+       <ImageView
+       android:layout_width="97dp"
+       android:layout_height="126dp"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginTop="30dp"
+       android:src="@drawable/icfm" />
+    <TextView 
+        android:text="icodeformoney.com"
+        android:fontFamily="ARIAL"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" 
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="50px"/>
+    <RelativeLayout 
+           android:layout_width="match_parent"
+        android:layout_height="match_parent">
+          >
+      <TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="#ffffff"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"	
+	    android:layout_marginBottom="25dp"
+	    android:text="Made With ❤  by Zeref Weissmann"
+	    android:gravity="center"
+	    
+	    />
+</RelativeLayout>
+    
+
+</LinearLayout>

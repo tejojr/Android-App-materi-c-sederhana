@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Part 4</title>
+  <style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+ p{
+  text-align: justify;
+}
+.php .de1, .php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;}
+.php  {font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;}
+.php a:link {color: #000060;}
+.php a:hover {background-color: #f0f000;}
+.php .imp {font-weight: bold; color: red;}
+.php li, .php .li1 {font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;}
+.php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php .li2 {font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;}
+.php .kw1 {color: #b1b100;}
+.php .kw2 {color: #000000; font-weight: bold;}
+.php .kw3 {color: #990000;}
+.php .kw4 {color: #009900; font-weight: bold;}
+.php .co1 {color: #666666; font-style: italic;}
+.php .co2 {color: #666666; font-style: italic;}
+.php .co3 {color: #0000cc; font-style: italic;}
+.php .co4 {color: #009933; font-style: italic;}
+.php .coMULTI {color: #666666; font-style: italic;}
+.php .es0 {color: #000099; font-weight: bold;}
+.php .es1 {color: #000099; font-weight: bold;}
+.php .es2 {color: #660099; font-weight: bold;}
+.php .es3 {color: #660099; font-weight: bold;}
+.php .es4 {color: #006699; font-weight: bold;}
+.php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php .es6 {color: #009933; font-weight: bold;}
+.php .es_h {color: #000099; font-weight: bold;}
+.php .br0 {color: #009900;}
+.php .sy0 {color: #339933;}
+.php .sy1 {color: #000000; font-weight: bold;}
+.php .st0 {color: #0000ff;}
+.php .st_h {color: #0000ff;}
+.php .nu0 {color: #cc66cc;}
+.php .nu8 {color: #208080;}
+.php .nu12 {color: #208080;}
+.php .nu19 {color:#800080;}
+.php .me1 {color: #004000;}
+.php .me2 {color: #004000;}
+.php .re0 {color: #000088;}
+.php span.xtra { display:block; }
+
+--!></style>
+
+</head>
+<body>
+  <div class="container">
+   <h1>WinForms C#</h1><p>Meskipun aplikasi console mudah dan sederhana untuk digunakan sebagai pembelajaran, akan tetapi saat ini sudah hampir tidak ada lagi aplikasi berbasis console. Oleh karena itu tutorial ini juga akan diselingi dengan beberapa contoh&nbsp;aplikasi Windows Forms. Oleh karena itu pada bagian ini kita akan sedikit berkenalan dengan aplikasi Windows Forms. Pertama-tama, kita <a href="IDE-CSharp.html">buat suatu project Windows Forms baru</a>&nbsp;dengan nama HelloWorldWin. Akan tampak desain tampilan Form1 pada layar. Form adalah istilah yang digunakan untuk window yang akan muncul pada aplikasi kita.</p>
+   <hr>
+   <h2>Toolbox</h2>
+
+   <div><img class="img-fluid" alt="ToolBox Visual Studio" src="images/ToolBox.png" style="float:left; height:262px; line-height:1.6em; margin-right:15px; opacity:0.9; width:241px" /></div>
+
+   <p>Kita dapat menambahkan kontrol (controls) atau komponen (component) ke dalam form dengan menggunakan ToolBox. Kontrol adalah objek objek visual seperti TextBox, ComboBox, dan DateTimePicker,&nbsp;sedangkan komponen adalah objek objek yang tidak tampak pada layar seperti Timer, BackgroundWorker, dan ErrorProvider. Apabila ToolBox tidak tampak atau tertutup, dapat dibuka melalui menu View &gt; ToolBox&nbsp;pada menubar.</p>
+
+   <p>Untuk menambahkan objek ke dalam Form, dobel klik&nbsp;atau drag&nbsp;objek yang diinginkan ke &nbsp;dalam form. Sebagai contoh, mari kita coba tambahkan sebuah Label, TextBox dan Button ke dalam Form, sehingga tampilan Form tampak seperti pada gambar di bawah.</p>
+
+   <p><img class="img-fluid" alt="Window Hello World" src="images/WinHelloId.png" /></p>
+   <hr>
+   <h2>Properties</h2>
+
+   <p>Setelah menambahkan control ke dalam Form, desain form akan tampak seperti pada bagian kiri gambar di atas. Untuk mengubah desain agar tampak seperti gambar di sebelah kanan, kita gunakan panel Properties. Panel properties biasa berada di sebelah kanan window Visual Studio. Ubah property pada masing-masing control seperti yang tertera pada tabel di bawah.</p>
+
+   <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Objek</th>
+        <th scope="col">Properties</th>
+        <th scope="col">Nilai</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Form1</td>
+        <td>Text</td>
+        <td>Hello World</td>
+      </tr>
+      <tr>
+        <td>Label1</td>
+        <td>Text</td>
+        <td>Nama :</td>
+      </tr>
+      <tr>
+        <td>TextBox1</td>
+        <td>Name</td>
+        <td>txtNama</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Button1</td>
+        <td>Name</td>
+        <td>btnHalo</td>
+      </tr>
+      <tr>
+        <td>Text</td>
+        <td>Bilang halo</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2>Event Driven</h2>
+
+  <p>Apabila pada aplikasi Console hanya terdapat satu alur program, pada aplikasi Windows Forms terdapat kode-kode program yang hanya akan berjalan apabila terjadi Event (kejadian)&nbsp;tertentu. Dobel klik pada tombol btnHalo pada desain form untuk membuat fungsi btnHalo_Click pada program. btnHalo_Click adalah suatu fungsi yang akan dijalankan setiap kali btnHalo diklik. Perlu diketahui bahwa btnHalo_Click bukanlah suatu event, melainkan hanya suatu fungsi yang dikaitkan dengan event Click pada btnHalo. Apabila Anda baru mulai mempelajari C#, Anda belum perlu memahami sampai sejauh ini, akan tetapi apabila Anda sangat ingin tahu, Anda dapat melihat pada bagian event dan delegates. Di dalam fungsi btn_Halo_Click, ketikkan kode berikut:</p>
+
+  <div class="php"><ol><li class="li1"><div class="de1"><span class="kw2">private</span> void btnHalo_Click<span class="br0">&#40;</span>object sender<span class="sy0">,</span> EventArgs e<span class="br0">&#41;</span> <span class="br0">&#123;</span></div></li>
+    <li class="li1"><div class="de1">&nbsp; MessageBox<span class="sy0">.</span>Show<span class="br0">&#40;</span><span class="st0">&quot;Halo Bpk/Ibu. &quot;</span> <span class="sy0"~ezentity_gt+ezentity_lt~/span> txtNama<span class="sy0">.</span>Text<span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+    <li class="li1"><div class="de1"><span class="br0">&#125;</span></div></li>
+  </ol></div>
+
+  <p>Kemudian jalankan program dengan menekan tombol F5. Saat program telah jalan, coba isikan suatu nama pada TextBox dan klik tombol btnHalo. Perintah MessageBox.Show akan menampilkan suatu window kecil pada layar dengan tulisan sesuai dengan nilai parameter pertamanya.</p>
+  <hr>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js" ></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

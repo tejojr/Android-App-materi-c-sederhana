@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Part 2</title>
+  <style type="text/css">
+  p{
+    text-align: justify;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>IDE C#</h1>
+    <p>Untuk mengetik program, biasanya kita menggunakan suatu editor atau program/software yang lebih komplek yang biasa disebut IDE (Integrated Development Environment). Pada umumnya, IDE menawarkan banyak kemudahan untuk mengembangkan software sehingga tidak dapat dibayangkan apabila kita harus mengembangkan software tanpa menggunakan IDE. IDE biasanya menawarkan fitur sebagai berikut:
+    </p>
+    <ul>
+      <li><strong>File explorer</strong>, untuk mengelola file atau script program. Biasanya bisa dibuka di dalam tab-tab. Bayangkan apabila kita harus membuka satu persatu file program di dalam windownya masing-masing, taskbar window kita akan dengan cepat menjadi penuh.</li>
+      <li><strong>Intellisense</strong>, atau kadang disebut code completion. Adalah fitur untuk melengkapi kode kita secara otomatis. Sebagai contoh, miaslnya kita mengetikkan &quot;Cons&quot;, VIsual Studio akan otomatis menampilkan pilihan pilihan objek, class atau variabel yang diawali dengan Cons, misalnya Console.</li>
+      <li><strong>Error highlighting</strong>, atau penanda error. Ketika kita mengetikkan kode yang salah, IDE biasanya akan menandai kode-kode yang error tersebut dengan garis bawah keriting berwarna merah. Hal ini memudahkan kita untuk melacak dan menghilangkan error error sederhana.</li>
+    </ul>
+    <p>Microsoft menyediakan Visual Studio sebagai IDE untuk mengembangkan program. Terdapat banyak versi Visual Studio yang dapat didownload pada&nbsp;<a href="http://www.microsoft.com/visualstudio/eng#downloads">Situs Microsoft</a>. Dan terdapat versi-versi Express yang bersifat gratis. Versi Visual Studio yang terbaru pada saat tutorial ini dibuat adalah Visual Studio 2013, tetapi di sini Saya masih menggunakan Visual Studio 2010 karena Saya masih punya software yang didevelop untuk Windows XP. Visual Studio 2012 dan 2013 menggunakan .NET Framework 4.5 yang tidak mendukung Windows XP. Jika Anda belum punya IDE, Saya sarankan Anda untuk mendownload Visual Studio 2010 Express All-in-one-ISO atau Visual Studio Express 2012 for Windows Desktop untuk digunakan sepanjang tutorial ini.</p>
+    <hr>
+
+    <h2>Membuat aplikasi baru</h2>
+
+    <p>Untuk membuat aplikasi baru pada Visual Studio, cukup klik &quot;New Project...&quot; pada halaman awal atau klik File &gt; New &gt; Project... pada menubar. Akan muncul sub window seperti berikut:</p>
+
+    <p><img class="img-fluid" alt="" src="images/New%20Application.png" style="height:355px; width:580px" /></p>
+
+    <p>Pertama tama, pastikan kita memilih Visual C# pada panel di sebelah kiri, kemudian pilih &quot;Windows Forms Application&quot; atau &quot;Console Application&quot; pada panel tengah. Saya sarankan untuk mencentang &quot;Create directory for solution&quot; agar lebih mudah mengelola file-file program apabila diperlukan.&nbsp;Terakhir, beri nama project sepertlunya dan tentukan lokasi penyimpanan file project. Tekan OK dan kita akan siap untuk membuat kode. Tentu saja kita dapat juga membuat aplikasi WPF atau ASP.NET menggunakan Visual Studio, akan tetapi topik tersebut berada di luar lingkup tutorial ini.</p>
+    <hr>  
+
+    <h2>Solution Explorer</h2>
+
+    <p><img class="img-fluid"  alt="" src="images/Solution%20Explorer.png" style="float:right; height:200px; margin-left:15px; width:320px"  />Ketika membuat suatu project baru berarti kita telah membuat beberapa file sekaligus menggunakan Visual Studio pada lokasi yang telah kita pilih. Pada umumnya, lebih mudah bagi kita untuk mengelola file kita dalam Visual Studio. Untuk itu, kita menggunakan panel Solution Explorer. Panel ini biasanya terletak di  bagian kanan window Visual Studio. Apabila panel ini tidak tampak atau tertutup, kita selalu dapat menampilkan panel tersebut menggunakan menubar: View &gt; Solution Explorer, atau shortcutnya CTRL + W, S.</p>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" ></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

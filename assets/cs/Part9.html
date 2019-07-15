@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>Perulangan while pada C#</title>
+	<style type="text/css">
+	p{
+		text-align: justify;
+	}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Perulangan while pada C#</h1><p>Syntax perulangan while pada C# adalah:</p>
+
+		<div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">while</span> <span style="color: #008000;">&#40;</span>kondisi<span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; <span style="color: #008000;">&#91;</span>perintah<span style="color: #008000;">&#93;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#125;</span></div></li>
+		</ol></div>
+
+		<p>Ketika suatu program sampai pada suatu perulangan while, pernyataan di dalam perulangan tersebut akan dijalankan terus menerus selama cond bernilai benar. Ketika menggunakan perulangan while, pada umumnya perlu memperhatikan tiga hal: permulaan, kondisi dan iterasi. Sehingga strukturnya menjadi:</p>
+
+		<div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#91;</span>permulaan<span style="color: #008000;">&#93;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">while</span> <span style="color: #008000;">&#40;</span>kondisi<span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; <span style="color: #008000;">&#91;</span>perintah<span style="color: #008000;">&#93;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; <span style="color: #008000;">&#91;</span>iterasi<span style="color: #008000;">&#93;</span></div></li>
+			<li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#125;</span></div></li>
+		</ol></div>
+		<p>Sebagai contoh:</p>
+
+		<div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Balapan akan dimulai dalam...&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;<span style="color: #6666cc; font-weight: bold;">int</span> hitung <span style="color: #008000;">=</span> <span style="color: #FF0000;">10</span><span style="color: #008000;">;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;<span style="color: #0600FF; font-weight: bold;">while</span> <span style="color: #008000;">&#40;</span>hitung <span style="color: #008000;">&gt;</span> <span style="color: #FF0000;">0</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>hitung <span style="color: #008000;"~ezentity_gt+ezentity_lt~/span> <span style="color: #666666;">&quot;...&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+			<li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; hitung<span style="color: #008000;">--;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#125;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;MULAI!!!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+		</ol></div>
+
+		<p>Kode di atas akan menghasilkan:</p>
+
+		<p>Balapan akan dimulai dalam...<br />
+			10...<br />
+			9...<br />
+			8...<br />
+			7...<br />
+			6...<br />
+			5...<br />
+			4...<br />
+			3...<br />
+			2...<br />
+			1...<br />
+		MULAI!!!</p>
+
+		<p><span style="line-height:1.6em">Cukup sering kesalahan terjadi pada permulaan, kondisi atau iterasi. Sebagai contoh, cukup mudah untuk lupa menuliskan </span><code style="line-height: 1.6em;">hitung--;</code><span style="line-height:1.6em">&nbsp;yang akan mengakibatkan perulangan tanpa batas,&nbsp;atau menggunakan kondisi&nbsp;</span><code style="line-height: 1.6em;">hitung &lt; 0</code><span style="line-height:1.6em">&nbsp;yang akan mengakibatkan perulangan sama sekali tidak dijalankan. Apabila terjadi perulangan tanpa batas, anda dapat langsung menutup window console, atau klik tombol &quot;stop debugging&quot; pada toolbar atau menekan shortcut:&nbsp;SHIFT + F5.</span></p>
+<hr>
+		<h1>Perulangan&nbsp;do while pada C#</h1>
+
+		<p>Perulangan do while hanya berbeda sedikit dari perulangan while. Perulangan do while akan dijalankan paling tidak satu kali karena kondisi perulangan ini terletak pada akhir perulangan. Syntax perulangan do while adalah sebagai berikut:</p>
+
+		<div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">do</span> <span style="color: #008000;">&#123;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp; <span style="color: #008000;">&#91;</span>perintah<span style="color: #008000;">&#93;</span></div></li>
+			<li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008000;">&#125;</span> <span style="color: #0600FF; font-weight: bold;">while</span> <span style="color: #008000;">&#40;</span>kondisi<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+		</ol></div>
+
+		<p>Satu satunya perbedaan antara perulangan do while dan perulangan while adalah ketika kondisi awal bernilai salah, yang mana akan mengakibatkan perulangan while dilewatkan sedangkan perulangan do while dijalankan hanya satu kali.</p>
+		<hr />
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.slim.min.js" ></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

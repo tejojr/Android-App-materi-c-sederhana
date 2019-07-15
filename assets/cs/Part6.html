@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title> 
+  Tipe data pada C#</title>
+  <style type="text/css">
+  p{
+    text-align: justify;
+  }
+  <!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+ .csharp .de1, .csharp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;}
+ .csharp  {font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;}
+ .csharp a:link {color: #000060;}
+ .csharp a:hover {background-color: #f0f000;}
+ .csharp .imp {font-weight: bold; color: red;}
+ .csharp li, .csharp .li1 {font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;}
+ .csharp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+ .csharp .li2 {font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;}
+ .csharp .kw1 {color: #0600FF; font-weight: bold;}
+ .csharp .kw2 {color: #FF8000; font-weight: bold;}
+ .csharp .kw3 {color: #008000;}
+ .csharp .kw4 {color: #6666cc; font-weight: bold;}
+ .csharp .kw5 {color: #000000;}
+ .csharp .co1 {color: #008080; font-style: italic;}
+ .csharp .co2 {color: #008080;}
+ .csharp .co3 {color: #008080;}
+ .csharp .coMULTI {color: #008080; font-style: italic;}
+ .csharp .es0 {color: #008080; font-weight: bold;}
+ .csharp .es_h {color: #008080; font-weight: bold;}
+ .csharp .br0 {color: #008000;}
+ .csharp .sy0 {color: #008000;}
+ .csharp .st0 {color: #666666;}
+ .csharp .st_h {color: #666666;}
+ .csharp .nu0 {color: #FF0000;}
+ .csharp .me1 {color: #0000FF;}
+ .csharp .me2 {color: #0000FF;}
+ .csharp span.xtra { display:block; }
+
+ --!></style>
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>Tipe data pada C#</h1><p>Meskipun banyak tipe data pada C#, tipe-tipe data yang paling sering digunakan adalah int, double, string, bool dan object. Masing-masing memiliki kegunaannya sendiri:</p>
+
+    <ul>
+      <li><strong>int</strong>, digunakan untuk menyatakan suatu bilangan bulat, positif maupun negatif, sebagai contoh jumlah murid dalam satu kelas.</li>
+      <li><strong>double</strong>, digunakan ketika kita perlu menyatakan suatu bilangan pecahan, misalkan nilai, harga atau berat. Akan tetapi, double adalah data dengan ketelitian 15-16 digit. Sehingga terkadang tipe data <strong>float</strong> dengan ketelitian 7 digit lebih disukai untuk contoh contoh tadi, dengan alasan menghemat memori.</li>
+      <li><strong>string</strong>, digunakan ketika menyatakan sekumpulan karakter, baik itu nama, kalimat, password ataupun kode. String sesungguhnya merupakan suatu array dari <strong>char</strong>.</li>
+      <li><strong>bool</strong>, bernilai true atau false. Paling sering digunakan untuk menyatakan suatu kondisi, misalnya IsEnabled, IsVisible, SedangHujan,&nbsp;SedangLapar, dan lain lain.</li>
+      <li><strong>object</strong>, adalah class dasar dari semua tipe data dalam C#. Digunakan untuk menyatakan tipe data yang tidak pasti.</li>
+    </ul>
+
+    <p>Tipe-tipe data lainnya adalah:</p>
+
+    <ul>
+      <li><strong>Mirip dengan&nbsp;int</strong>: sbyte, short, long, untuk tipe bertanda, byte, ushort, uint, ulong untuk tipe yang tak bertanda</li>
+      <li><strong>Mirip dengan double</strong>: float dan decimal</li>
+      <li><strong>char</strong>, untuk menyimpan satu karakter</li>
+    </ul>
+    <hr>
+    <h2>Konversi tipe data antar angka pada C#</h2>
+
+    <p>Terkadang kita dapat langsung menugaskan nilai antar tipe data yang berbeda. Misalnya jika kita menubaskan suatu nilai int ke variabel long, tidak ada perintah khusus yang dibutuhkan. Jika kita menugaskan tipe data yang lebih kecil ke tipe data yang lebih besar, C# akan secara implisit mengkonversi nilai tersebut. Akan tetapi jika tipe data yang lebih besar ditugaskan ke tipe data yang lebih kecil, diperlukan konversi tipe data. Sebagai contoh:</p>
+
+    <div class="csharp"><ol><li class="li1"><div class="de1"><span class="kw4">int</span> anInt <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw4">long</span> aLong <span class="sy0">=</span> <span class="nu0">2000000000</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="kw4">long</span> luarBatas <span class="sy0">=</span> <span class="nu0">3000000000</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="co1">//3 milyar, melebihi batas int</span></div></li>
+      <li class="li2"><div class="de2">&nbsp;</div></li>
+      <li class="li1"><div class="de1">anInt <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw4">int</span><span class="br0">&#41;</span>aLong<span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1">Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">&#40;</span>anInt<span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="co1">//Akan tampil 2000000000</span></div></li>
+      <li class="li1"><div class="de1">&nbsp;</div></li>
+      <li class="li2"><div class="de2">anInt <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw4">int</span><span class="br0">&#41;</span>luarBatas<span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1">Console<span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">&#40;</span>anInt<span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+      <li class="li1"><div class="de1"><span class="co1">//Akan tampil -1294967296</span></div></li>
+      <li class="li1"><div class="de1">&nbsp;</div></li>
+      <li class="li1"><div class="de1">Console<span class="sy0">.</span><span class="me1">ReadKey</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></div></li>
+    </ol></div>
+
+    <p>Penting diketahui bahwa jika suatu tipe data yang lebih besar dikonversi ke tipe data yang lebih kecil, dapat terjadi kehilangan data. Hal-hal ini juga berlaku ketika mengkonversi antara tipe data bilangan bulat dengan tipe data floating point. Selalu ingat bahwa berkurangnya&nbsp;ketelitian dapat terjadi.</p>
+    <hr>
+    <h2>Konversi tipe data string pada C#</h2>
+
+    <p>Tipe yang paling banyak digunakan untuk input, output dan penyimpanan sebetulnya adalah string. Untuk mengkonversi tipe data apapun ke string sesungguhnya cukup sederhana karena setiap tipe data di C# memiliki metode ToString(). Sebagai contoh:</p>
+
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">bool</span> AdaMatahari <span style="color: #008000;">=</span> <span style="color: #0600FF; font-weight: bold;">true</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">int</span> angka <span style="color: #008000;">=</span> <span style="color: #FF0000;">15</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">double</span> pecahan <span style="color: #008000;">=</span> <span style="color: #FF0000;">70.88</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>AdaMatahari<span style="color: #008000;">.</span><span style="color: #0000FF;">ToString</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #008080; font-style: italic;">//True</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>angka<span style="color: #008000;">.</span><span style="color: #0000FF;">ToString</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> &nbsp; <span style="color: #008080; font-style: italic;">//15</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>pecahan<span style="color: #008000;">.</span><span style="color: #0000FF;">ToString</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #008080; font-style: italic;">//70.88</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+    </ol></div>
+
+    <p>Di sisi lain, agak sulit&nbsp;mengkonversi dari string ke tipe lain. Semua tipe data numerik memiliki metoda Parse dan TryParse. Kita menggunakan ini untuk mengkonversi string ke tipe data numerik. Kita menggunakan Parse ketika kita SANGAT yakin mengenai string yang bersangkutan, ketika kita tidak yakin, kita gunakan TryParse. Sebagai contoh:</p>
+
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">string</span> strBool <span style="color: #008000;">=</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadLine</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">bool</span> aBool <span style="color: #008000;">=</span> Boolean<span style="color: #008000;">.</span><span style="color: #0000FF;">Parse</span><span style="color: #008000;">&#40;</span>strBool<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>aBool<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">string</span> strInt <span style="color: #008000;">=</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadLine</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>Int32<span style="color: #008000;">.</span><span style="color: #0000FF;">Parse</span><span style="color: #008000;">&#40;</span>strInt<span style="color: #008000;">&#41;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">string</span> strDouble <span style="color: #008000;">=</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadLine</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">double</span> aDouble<span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">bool</span> BisaParse <span style="color: #008000;">=</span> <span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">.</span><span style="color: #0000FF;">TryParse</span><span style="color: #008000;">&#40;</span>strDouble, <span style="color: #0600FF; font-weight: bold;">out</span> aDouble<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #0600FF; font-weight: bold;">if</span> <span style="color: #008000;">&#40;</span>BisaParse<span style="color: #008000;">&#41;</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span>aDouble<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #0600FF; font-weight: bold;">else</span> Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Tolong input suatu angka&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+    </ol></div>
+    <p>Coba masukkan &quot;True&quot; atau &quot;FaLsE&quot; pada prompt pertama, dan input yang valid pada prompt kedua dan ketiga. Program akan mengeluarkan kembali input yang diterima. Kemudian coba masukkan string yang bukan boolean ke dalam prompt pertama, akan terjadi runtime error. Dan terakhir, coba input string yang bukan angka pada prompt ketiga, program akan dengan rapi menampilkan &quot;Tolong input suatu angka&quot;. Perlu diperhatikan bahwa runtime error pada saat debugging berarti Critical Error pada software yang sudah jadi. Hal ini harus dihindari semampunya.</p>
+    <hr>
+    <h2>Literal pada C#</h2>
+
+    <p>Istilah literal atau literal constant merujuk pada suatu nilai pada program yang tidak dapat diubah. Kita menggunakan literal untuk menyatakan nilai-nilai. Literal-literal pada C# dijelaskan dalam tabel di berikut:</p>
+
+    <table class="table table-striped">
+     <thead class="thead-dark">
+      <tr>
+        <th scope="col">Tipe data</th>
+        <th scope="col">Literal</th>
+        <th scope="col">Contoh</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>bool</td>
+        <td>true atau false</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>Bilangan bulat</td>
+        <td>0, -200, 87329</td>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>Awalan 0x untuk menyatakan bilangan heksadesimal</td>
+        <td>0xF, 0xaeaeae</td>
+      </tr>
+      <tr>
+        <td>double</td>
+        <td>Bilangan pecahan dengan titik untuk menyatakan koma</td>
+        <td>72.59034</td>
+      </tr>
+      <tr>
+        <td>double</td>
+        <td>e untuk menyatakan pangkat sepuluh</td>
+        <td>6.02e23, 1.602e-19</td>
+      </tr>
+      <tr>
+        <td>string</td>
+        <td>Karakter-karakter yang diapit oleh petik dua</td>
+        <td>&quot;6f8c11# ^_^ &lt;3&quot;</td>
+      </tr>
+      <tr>
+        <td>char</td>
+        <td>Satu karakter yang diapit oleh petik satu</td>
+        <td>&#39;K&#39;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Untuk tipe data string, terdapat karakter karakter yang tidak dapat diketik langsung ke dalam petik dua. Untuk mewakili karakter-karakter tersebut, digunakan escape sequences. Escape sequence yang umum digunakan antara lain:</p>
+
+  <table class="table table-striped">
+   <thead class="thead-dark">
+    <tr>
+      <th scope="col">Escape Sequence</th>
+      <th scope="col">Karakter yang diwakili</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\&#39;</td>
+      <td>Single quote</td>
+    </tr>
+    <tr>
+      <td>\&quot;</td>
+      <td>Double quote</td>
+    </tr>
+    <tr>
+      <td>\\</td>
+      <td>Backslash</td>
+    </tr>
+    <tr>
+      <td>\0</td>
+      <td>Null, not the C# null value</td>
+    </tr>
+    <tr>
+      <td>\a</td>
+      <td>Bell</td>
+    </tr>
+    <tr>
+      <td>\b</td>
+      <td>Backspace</td>
+    </tr>
+    <tr>
+      <td>\f</td>
+      <td>Form feed</td>
+    </tr>
+    <tr>
+      <td>\n</td>
+      <td>Newline</td>
+    </tr>
+    <tr>
+      <td>\r</td>
+      <td>Carriage Return</td>
+    </tr>
+    <tr>
+      <td>\t</td>
+      <td>Horizontal Tab</td>
+    </tr>
+    <tr>
+      <td>\v</td>
+      <td>Vertical Tab</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Sebagai contoh apabila kita ingin menampung&nbsp;<code>mysql &lt; &quot;path\ke\file\sqldump&quot;</code>&nbsp;ke dalam suatu string:</p>
+
+<p><code>string command = &quot;mysql &lt; \&quot;path\\ke\\file\\sqldump\&quot;&quot;;</code></p>
+<hr>
+<h2>Batas nilai tipe-tipe data numerik pada&nbsp;C#</h2>
+
+<p>Bagian ini tidak terlalu penting, jika Anda lebih menghargai waktu dibanding pengetahuan, lewati bagian ini. Salah satu alasan untuk menggunakan tipe data lainnya adalah karena batasan nilai. Batasan nilai pada tiap tipe data di C# dipaparkan pada tabel berikut:</p>
+
+
+<table class="table table-striped">
+ <thead class="thead-dark">
+  <tr>
+    <th scope="col">Tipe data</th>
+    <th scope="col">Penjelasan</th>
+    <th scope="col">Batas nilai</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>sbyte</td>
+    <td>Bilangan bulat 8 bit bertanda</td>
+    <td>&minus;128 sampai 127</td>
+  </tr>
+  <tr>
+    <td>short</td>
+    <td>Bilangan bulat 16 bit bertanda</td>
+    <td>&minus;32,768 sampai 32,767</td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>Bilangan bulat 32 bit bertanda</td>
+    <td>&minus;2,147,483,648 sampai 2,147,483,647</td>
+  </tr>
+  <tr>
+    <td>long</td>
+    <td>Bilangan bulat 64 bit bertanda</td>
+    <td>&minus;9,223,372,036,854,775,808 sampai 9,223,372,036,854,775,807</td>
+  </tr>
+  <tr>
+    <td>byte</td>
+    <td>Bilangan bulat 8 bit tak bertanda</td>
+    <td>0 sampai 255</td>
+  </tr>
+  <tr>
+    <td>ushort</td>
+    <td>Bilangan bulat 16 bit tak bertanda</td>
+    <td>0 sampai 65,535</td>
+  </tr>
+  <tr>
+    <td>uint</td>
+    <td>Bilangan bulat 32 bit tak bertanda</td>
+    <td>0 sampai 4,294,967,295</td>
+  </tr>
+  <tr>
+    <td>ulong</td>
+    <td>Bilangan bulat 64 bit tak bertanda</td>
+    <td>0 sampai 18,446,744,073,709,551,615</td>
+  </tr>
+  <tr>
+    <td>float</td>
+    <td>Floating point berketelitian 7 digit</td>
+    <td>&plusmn;1.5e&minus;45 sampai &plusmn;3.4e38</td>
+  </tr>
+  <tr>
+    <td>double</td>
+    <td>Floating point berketelitian 15-16 digit</td>
+    <td>&plusmn;5.0e&minus;324 sampai &plusmn;1.7e308</td>
+  </tr>
+  <tr>
+    <td>decimal</td>
+    <td>Bilangan dengan 28-29 angka penting</td>
+    <td>(-7.9 x 10<sup>28</sup>&nbsp;sampai 7.9 x 10<sup>28</sup>) / (10<sup>0 to 28</sup>)</td>
+  </tr>
+</tbody>
+</table>
+
+<p>Bilangan bulat bertanda sesungguhnya menggunakan 1 bit dari ukuran data mereka untuk menyatakan tanda (negatif atau positif). Itulah kenapa batas nilai positif dari tipe tak bertanda dua kali lebih besar dari tipe yang bertanda dengan ukuran data yang sama.&nbsp;Akan tetapi bilangan bulat bertanda sudah jarang digunakan kecuali ketika berurusan dengan antarmuka hardware, pengolahan citra, atau pemrograman tingkat rendah lainnya. Dan juga, saya sarankan hindari menggunakan tipe data decimal karena tipe data ini tidak lazim pada bahasa pemrograman yang lain.</p>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js" ></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

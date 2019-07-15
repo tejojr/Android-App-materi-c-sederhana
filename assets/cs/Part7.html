@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Operator aritmatika pada C#</title>
+  <style type="text/css">
+  p{
+    text-align: justify;
+  }
+</style>
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>Operator aritmatika pada C#</h1><p>Ada banyak operator bawaan pada C# yang dapat dikategorikan ke dalam operator aritmatika, operator penugasan, operator pembanding, operator logika dan operator bitwise. Akan tetapi di sini kita tidak akan membahas semua operator tersebut. Kita hanya akan membahas seperlunya saja. Pertama-tama, saya ingin memperkenalkan operator penugasan yang telah kita gunakan beberapa kali sebelumnya, yaitu operator &quot;=&quot;. Kita menggunakan operator ini untuk memberi nilai ke suatu variabel. Sebagai contoh:</p>
+
+    <p><code>int anInt = 30;</code></p>
+
+    <p>Pernyataan di atas akan mengakibatkan anInt menyimpan nilai 30. Berikutnya adalah operator aritmatika, yaitu:</p>
+    <table class="table table-striped">
+      <caption>sebagai contoh, misalkan kita punya a = 15, b = 10</caption>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Operator</th>
+          <th scope="col">Keterangan</th>
+          <th scope="col">Contoh</th>
+          <th scope="col">Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>+</td>
+          <td>Penjumlahan</td>
+          <td>a + b</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Pengurangan</td>
+          <td>a - b</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Perkalian</td>
+          <td>a * b</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Pembagian</td>
+          <td>a / b</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Modulus</td>
+          <td>a % b</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>++</td>
+          <td>Increment</td>
+          <td>a++</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>--</td>
+          <td>Decrement</td>
+          <td>a--</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Minus</td>
+          <td>-a</td>
+          <td>-15</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Perhatikan bahwa pada contoh pembagian di atas, 15 dibagi 10 seharusnya 1,5. Hal ini benar untuk tipe data double. Akan tetapi pada contoh di atas diasumsikan a dan b adalah integer yang mana akan membulatkan ke bawah setiap bilangan pecahan positif. Terdapat prioritas dalam&nbsp;operator-operator di atas. Operator increment, decrement dan minus akan dihitung duluan, kemudian baru modulus, perkalian dan pembagian, terakhir barulah operator pengurangan dan penjumlahan. Jika perlu untuk mengubah urutan eksekusi, tanda kurung dapat digunakan. Di bawah ini adalah contoh sederhana operasi aritmatika:</p>
+
+    <div class="csharp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol><li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">double</span> harga <span style="color: #008000;">=</span> <span style="color: #FF0000;">32</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">double</span> diskon <span style="color: #008000;">=</span> <span style="color: #FF0000;">0.2</span><span style="color: #008000;">;</span> <span style="color: #008080; font-style: italic;">//20% off</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #6666cc; font-weight: bold;">double</span> hargaDiskon <span style="color: #008000;">=</span> harga <span style="color: #008000;">-</span> <span style="color: #008000;">&#40;</span>harga <span style="color: #008000;">*</span> diskon<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Harga dasar: &quot;</span> <span style="color: #008000;"~ezentity_gt+ezentity_lt~/span> harga<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Diskon &nbsp; &nbsp; : &quot;</span> <span style="color: #008000;"~ezentity_gt+ezentity_lt~/span> diskon <span style="color: #008000;">*</span> <span style="color: #FF0000;">100</span> <span style="color: #008000;"~ezentity_gt+ezentity_lt~/span> <span style="color: #666666;">&quot;%&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #666666;">&quot;Harga &nbsp; &nbsp; &nbsp;: &quot;</span> <span style="color: #008000;"~ezentity_gt+ezentity_lt~/span> hargaDiskon<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008080; font-style: italic;">//Harga dasar: 32</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008080; font-style: italic;">//Diskon &nbsp; &nbsp; : 20%</span></div></li>
+      <li style="font-weight: bold; vertical-align:top;font-weight: bold; color: #006060;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;"><span style="color: #008080; font-style: italic;">//Harga &nbsp; &nbsp; &nbsp;: 25.6</span></div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">&nbsp;</div></li>
+      <li style="font-weight: normal; vertical-align:top;font: normal normal 130% 'Courier New', Courier, monospace; color: #003030;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;;white-space: nowrapcolor: #000020;">Console<span style="color: #008000;">.</span><span style="color: #0000FF;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span></div></li>
+    </ol></div>
+    <p>Hasil perhitungan hargaDiskon sesungguhnya akan tetapi sama meskipun tanpa tanda kurung. Akan tetapi seringkali, lebih mudah untuk menggunakan tanda kurung daripada harus meninjau kembali urutan prioritas operator. Pernyataan yang bersangkutan juga akan lebih mudah dibaca dengan menyertakan tanda kurung. Perhatikan bahwa tanda &quot;+&quot; di dalam metoda Console.WriteLine bukanlah operator aritmatika, melainkan operator penyambungan string. Ketika + digunakan di antara angka, ia menjadi operator aritmatika, akan tetapi ketika digunakan di antara string dengan tipe data apa saja, ia menjadi operator penyambungan string.</p>
+
+    <p>Terdapat juga operator yang di sebut operator majemuk. Terkadang kita ingin menambahkan sesuatu ke nilai yang sebelumnya, sebagai contoh, kita ingin menaikkan harga menjadi 34, kita dapat menuliskan harga = harga + 2; Tetapi dengan operator majemuk, kita cukup menuliskan harga += 2; yang akan menghasilkan hasil yang sama. Operator-operator majemuk antara lain:</p>
+
+    <table class="table table-striped">
+      <caption>sebagai contoh jika a = 15</caption>
+      <thead class="thead-dark">
+
+        <tr>
+          <th scope="col">Operator</th>
+          <th scope="col">Keterangan</th>
+          <th scope="col">Contoh</th>
+          <th scope="col">Hasil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>+=</td>
+          <td>Penambahan dan penugasan</td>
+          <td>a += 30</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>-=</td>
+          <td>Pengurangan dan penugasan</td>
+          <td>a -= 3</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>*=</td>
+          <td>Perkalian dan penugasan</td>
+          <td>a *= 5</td>
+          <td>75</td>
+        </tr>
+        <tr>
+          <td>/=</td>
+          <td>Pembagian dan penugasan</td>
+          <td>a /= 5</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>%=</td>
+          <td>Modulus dan penugasan</td>
+          <td>a %= 6</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" ></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
